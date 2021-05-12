@@ -1,0 +1,38 @@
+//Desenvolvido por: Felipe Freitas
+#include <stdio.h>
+#include <conio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main (){
+	
+   	setlocale(LC_ALL, "Portuguese");
+   	
+   	int i, j, qtd, aux=0;
+
+	int vetor[i];	
+	printf("\nInforme os valores:\n");
+	for(i=0; i<36; i++){
+		scanf("%i",&vetor[i]);
+	}
+	printf("\nVetor desordenado:\n");
+		for(i=0; i<qtd; i++){
+			printf("[%d]\n",vetor[i]);
+		}
+//ordenação
+	for(i=0; i<36; i++){
+		for(j=(i+1);j<qtd;j++){
+			if(vetor[j] > vetor [i]){
+				aux = vetor[j];
+				vetor[j] = vetor[i];
+				vetor[i] = aux;
+			}	
+		}		
+	}
+	printf("Vetor ordenado:\n");
+	for(i=0; i<36; i++){
+		printf("[%d]\n",vetor[i]);
+	}
+getchar();				
+return 0;
+}
